@@ -1,14 +1,17 @@
 import React from "react";
+import Image from "next/image";
 
 const Header = () => {
   return (
     <>
       <div className="bg-[#DC0714] text-white font-sans">
         <header className="flex flex-col items-center justify-center py-8">
-          <img
+          <Image
             src="/headerlogo.png"
             alt="Liverpool FC Logo"
-            className="w-32 mb-4"
+            className="w-8 h-8 mb-4"
+            width={100}
+            height={100}
           />
           <h1 className="text-4xl font-bold">
             Welcome to Liverpool FC Updates
