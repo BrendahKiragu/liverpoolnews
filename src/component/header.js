@@ -1,10 +1,11 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 const Header = () => {
   return (
     <>
-      <div className="bg-[#DC0714] text-white font-sans">
+      <div className="bg-[#DC0714] text-white font-cinzel">
         <header className="flex flex-col items-center justify-center py-8">
           <Image
             src="/headerlogo.png"
@@ -13,27 +14,27 @@ const Header = () => {
             width={100}
             height={100}
           />
-          <h1 className="text-4xl font-bold">
-            Welcome to Liverpool FC Updates
+          <h1 className="text-4xl font-semibold font-dancing">
+            Welcome to Liverpoolnews
           </h1>
-          <p className="text-xl mt-2">You'll Never Walk Alone</p>
+          <p className="text-xl mt-4 font-roboto">You'll Never Walk Alone</p>
 
-          <nav className="mt-6">
+          <nav className="mt-4">
             <ul className="flex gap-6 text-lg">
               <li>
-                <a href="/" className="hover:underline text-white">
+                <Link href="/" className="hover:underline text-white">
                   Team News
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/players" className="hover:underline text-white">
+                <Link href="/players" className="hover:underline text-white">
                   Players
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/fixtures" className="hover:underline text-white">
+                <Link href="/fixtures" className="hover:underline text-white">
                   Fixtures
-                </a>
+                </Link>
               </li>
             </ul>
           </nav>

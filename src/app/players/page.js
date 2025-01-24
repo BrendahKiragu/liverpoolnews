@@ -30,7 +30,7 @@ const Players = () => {
   }
 
   return (
-    <div className="min-h-screen bg-[#DC0714] text-white font-sans">
+    <div className="min-h-screen bg-white text-black font-sans">
       <Header />
       <h2 className="text-2xl font-bold text-center">Liverpool FC Players</h2>
 
@@ -39,24 +39,44 @@ const Players = () => {
           players.map((player) => (
             <div
               key={player.id}
-              className="bg-[#DC0714] hover:bg-red-700 border-b-2 border-l-2 border-r-2 border-white mb-1 text-white rounded-lg shadow-md transform transition-all duration-300 hover:scale-105 hover:shadow-lg overflow-hidden flex flex-col justify-between"
+              className="bg-white hover:bg-[#F4F4F4] border-2 border-[#F0F0F0] rounded-lg shadow-lg transform transition-all duration-300 hover:scale-105 overflow-hidden flex flex-col"
             >
-              <div className="p-4">
-                <h3 className="font-bold text-lg">{player.name}</h3>
-                <p>Position: {player.position}</p>
-                <p>Nationality: {player.nationality}</p>
+              <div className="relative">
+                {/* Image Section */}
+                <img
+                  src="/player.jpeg" // Add image URL for player photo
+                  alt={player.name}
+                  className="w-full h-auto object-cover rounded-t-lg"
+                />
+                <div className="absolute bottom-0 left-0 bg-black bg-opacity-50 w-full py-2 text-center">
+                  <h3 className="text-white font-semibold text-lg">
+                    {player.name}
+                  </h3>
+                </div>
               </div>
 
-              <p className="mt-4 text-center text-lg font-semibold">
-                Click here to see more stats{" "}
-                <a
-                  href="https://www.liverpoolfc.com/team/mens"
-                  target="_blank"
-                  className="flex items-center justify-end p-4 mt-auto text-white hover:opacity-80"
-                >
-                  <FaArrowRight className="text-white" />
-                </a>
-              </p>
+              {/* Player Details Section */}
+              <div className="p-6 flex flex-col justify-between">
+                <p className="text-sm text-gray-700">
+                  <span className="font-semibold">Position:</span>{" "}
+                  {player.position}
+                </p>
+                <p className="text-sm text-gray-700">
+                  <span className="font-semibold">Nationality:</span>{" "}
+                  {player.nationality}
+                </p>
+
+                <p className="mt-4 text-center text-lg font-semibold mb-6">
+                  Click here to see more stats
+                  <a
+                    href="https://www.liverpoolfc.com/team/mens"
+                    target="_blank"
+                    className="flex items-center justify-center p-2 mt-3 text-[#DC0714] hover:text-[#800000] transition-colors"
+                  >
+                    <FaArrowRight className="text-[#DC0714]" />
+                  </a>
+                </p>
+              </div>
             </div>
           ))
         ) : (

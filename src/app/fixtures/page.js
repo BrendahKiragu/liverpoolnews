@@ -54,21 +54,25 @@ const Fixtures = () => {
   }
 
   return (
-    <div className="min-h-screen bg-[#DC0714] text-white font-sans">
+    <div className="min-h-screen  text-white font-sans">
       <Header />
       <main className="p-6">
-        <h2 className="text-3xl font-bold text-center mb-8">
+        <h2 className="text-3xl font-bold text-[#DC0714] text-center mb-8 relative z-10">
           Upcoming Matches
         </h2>
+        <img src="/anfield.jpg" className="w-full h-auto" />
+
         <div className="space-y-12">
           {Object.entries(groupedFixtures).map(([month, matches]) => (
             <div key={month}>
-              <h3 className="text-2xl font-bold text-center mb-4">{month}</h3>
+              <h3 className="text-2xl font-bold text-center bg-[#DC0714] mb-4">
+                {month}
+              </h3>
               <div className="space-y-6">
                 {matches.map((match) => (
                   <div
                     key={match.id}
-                    className="bg-white text-black p-4 rounded shadow-md"
+                    className="bg-white text-black p-4 rounded shadow-2xl"
                   >
                     {/* league */}
                     <p className="text-gray-700 font-bold flex items-center">
