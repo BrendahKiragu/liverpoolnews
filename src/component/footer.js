@@ -1,9 +1,10 @@
+// "use client";
 import { FaFacebook, FaTwitter, FaYoutube, FaTiktok } from "react-icons/fa";
 
 const Footer = () => {
   return (
     <footer className="py-8 bg-[#b71515] text-white">
-      <div className="container mx-auto flex flex-wrap justify-between">
+      <div className="container mx-auto flex justify-between">
         {/* Image Column */}
         <div className="w-full md:w-1/3">
           <h2 className="font-bold text-lg mb-3">Our Team</h2>
@@ -66,7 +67,7 @@ const Footer = () => {
       </div>
 
       {/* Footer Bottom: Copyright Text */}
-      <div className="py-2 flex justify-center text-center mt-8">
+      <div className="py-2 align-center text-center mt-8">
         <p className="text-white text-sm">
           &copy; {new Date().getFullYear()} Liverpoolnews. All rights reserved.
         </p>
