@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <>
       <div className="bg-[#DC0714] text-white font-cinzel">
-        <header className="flex flex-col items-center justify-center py-8">
+        <header className="flex flex-col items-center font-oswald justify-center py-8">
           <Image
             src="/headerlogo.png"
             alt="Liverpool FC Logo"
@@ -14,12 +14,10 @@ const Header = () => {
             width={100}
             height={100}
           />
-          <h1 className="text-4xl font-semibold font-dancing">
-            Welcome to Liverpoolnews
-          </h1>
+          <h1 className="text-9xl font-semibold ">Welcome to Liverpoolnews</h1>
           <p className="text-xl mt-4 font-roboto">You'll Never Walk Alone</p>
 
-          <nav className="mt-4">
+          <nav className="mt-4 font-lobster ">
             <ul className="flex gap-6 text-lg">
               <li>
                 <Link href="/" className="hover:underline text-white">
