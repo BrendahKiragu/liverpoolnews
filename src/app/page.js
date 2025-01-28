@@ -1,11 +1,14 @@
 import React from "react";
 import Header from "@/component/header";
 import Footer from "@/component/footer";
+import News from "@/component/news";
 
 // Fetch news data from the API
 const fetchNews = async () => {
   const apiKey = process.env.NEWS_API_KEY;
-  const url = `https://newsapi.org/v2/everything?q=anfield&lfc&arne+slot&language=en&apiKey=${apiKey}`;
+  // const url = `https://newsapi.org/v2/everything?q=liverpool+fc+news&epl&anfield&arne+slot&language=en&apiKey=${apiKey}`;
+  // const url = `https://newsapi.org/v2/everything?q=lfc&anfield&lfc&arne+slot&livescore&language=en&apiKey=${apiKey}`;
+  const url = `https://newsapi.org/v2/everything?q=arne$slot&lfc&champions+league&language=en&sortBy=publishedAt&apiKey=${apiKey}`;
 
   const response = await fetch(url, { cache: "no-store" });
   if (!response.ok) {
@@ -25,18 +28,19 @@ export default async function Home() {
 
   if (!feed) {
     return (
-      <div className="min-h-screen bg-[#DC0714] text-white font-sans">
-        <Header />
-        <main className="p-4">
-          <h3 className="bg-white text-red-700 text-2xl mb-4 rounded text-center font-lobster">
-            Latest News
-          </h3>
-          <p className="text-center text-gray-200">
-            News feed is under maintenance. Please check back later.
-          </p>
-        </main>
-        <Footer />
-      </div>
+      <News />
+      // <div className="min-h-screen bg-[#DC0714] text-white font-sans">
+      //   <Header />
+      //   <main className="p-4">
+      //     <h3 className="bg-white text-red-700 text-2xl mb-4 rounded text-center">
+      //       Latest News
+      //     </h3>
+      //     <p className="text-center text-gray-200">
+      //       News feed is under maintenance. Please check back later.
+      //     </p>
+      //   </main>
+      //   <Footer />
+      // </div>
     );
   }
 
@@ -44,7 +48,7 @@ export default async function Home() {
     <div className="min-h-screen bg-[#DC0714] text-white font-sans">
       <Header />
       <main className="p-4">
-        <h3 className="bg-white text-red-700 text-2xl mb-4 rounded text-center font-lobster">
+        <h3 className="bg-white text-red-700 text-2xl mb-4 rounded text-center">
           Latest News
         </h3>
         <div className="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
