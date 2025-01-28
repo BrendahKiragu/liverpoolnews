@@ -54,7 +54,7 @@ const Fixtures = () => {
   }
 
   return (
-    <div className="min-h-screen  text-white font-sans">
+    <div className="min-h-screen bg-white text-black font-sans">
       <Header />
       <main className="p-6">
         <h2 className="text-3xl font-bold text-[#DC0714] text-center mb-8 relative z-10">
@@ -99,9 +99,7 @@ const Fixtures = () => {
                           alt={match.homeTeam.name}
                           className="w-10 h-10"
                         />
-                        <span className="text-xl font-semibold">
-                          {match.homeTeam.name}
-                        </span>
+                        <span>{match.homeTeam.name}</span>
 
                         <span className="text-lg font-medium bg-gray-300 p-1 mx-2">
                           {new Date(match.utcDate).toLocaleTimeString("en-GB", {
@@ -124,7 +122,9 @@ const Fixtures = () => {
           ))}
         </div>
       </main>
-      <Footer />
+      <div className="bg-[#DC0714] text-white">
+        <Footer />
+      </div>
     </div>
   );
 };
