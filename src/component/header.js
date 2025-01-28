@@ -1,11 +1,15 @@
+"use client";
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
+  const pathname = usePathname();
+
   return (
     <>
-      <div className="bg-[#DC0714] text-white font-cinzel">
+      <div className="bg-[#DC0714] text-white">
         <header className="flex flex-col items-center font-oswald justify-center py-8">
           <Image
             src="/headerlogo.png"
@@ -15,22 +19,43 @@ const Header = () => {
             height={100}
           />
           <h1 className="text-9xl font-semibold ">Welcome to Liverpoolnews</h1>
-          <p className="text-xl mt-4 font-roboto">You'll Never Walk Alone</p>
+          <p className="text-xl mt-4">You'll Never Walk Alone</p>
 
-          <nav className="mt-4 font-lobster ">
+          <nav className="mt-4">
             <ul className="flex gap-6 text-lg">
               <li>
-                <Link href="/" className="hover:underline text-white">
+                <Link
+                  className={`${
+                    pathname === "/"
+                      ? "underline font-bold decoration-white"
+                      : ""
+                  }`}
+                  href="/"
+                >
                   Team News
                 </Link>
               </li>
               <li>
-                <Link href="/players" className="hover:underline text-white">
+                <Link
+                  className={`${
+                    pathname === "/players"
+                      ? "underline font-bold decoration-white"
+                      : ""
+                  }`}
+                  href="/players"
+                >
                   Players
                 </Link>
               </li>
               <li>
-                <Link href="/fixtures" className="hover:underline text-white">
+                <Link
+                  className={`${
+                    pathname === "/fixtures"
+                      ? "underline font-bold decoration-white"
+                      : ""
+                  }`}
+                  href="/fixtures"
+                >
                   Fixtures
                 </Link>
               </li>
