@@ -1,20 +1,28 @@
-export async function GET() {
-  try {
-    const response = await fetch("http://api.football-data.org/v4/teams/64", {
-      headers: {
-        "X-Auth-Token": process.env.PLAYERS_API_KEY,
-      },
-    });
+import prisma from "../../../../lib/prisma";
 
-    if (!response.ok) {
-      return new Response("Failed to fetch player stats", { status: 500 });
+export async function GET(request) {
+  try {
+    // Fetch players' data from the database
+    const players = await prisma.players.findMany();
+
+    // Return a 404 if no players are found
+    if (!players || players.length === 0) {
+      return new Response(JSON.stringify({ error: "No players found" }), {
+        status: 404,
+        headers: { "Content-Type": "application/json" },
+      });
     }
 
-    const data = await response.json();
-    return new Response(JSON.stringify(data), {
+    // Return the players' data as JSON
+    return new Response(JSON.stringify(players), {
+      status: 200,
       headers: { "Content-Type": "application/json" },
     });
   } catch (error) {
-    return new Response("Error fetching player stats", { status: 500 });
+    console.error("Error fetching players:", error);
+    return new Response(JSON.stringify({ error: "Internal Server Error" }), {
+      status: 500,
+      headers: { "Content-Type": "application/json" },
+    });
   }
 }
