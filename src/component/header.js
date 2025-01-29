@@ -23,6 +23,7 @@ const Header = () => {
 
           <nav className="mt-4">
             <ul className="flex gap-6 text-lg">
+              {/* navlinks */}
               <li>
                 <Link
                   className={`${
