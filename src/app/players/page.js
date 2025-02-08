@@ -36,7 +36,9 @@ export default async function Players() {
       <div className="min-h-screen bg-white text-black font-sans">
         <Header />
         <p>Player stats are currently under maintenance. Come back later.</p>
-        <Footer />
+        <div className="bg-[#DC0714 text-white]">
+          <Footer />
+        </div>
       </div>
     );
   }
