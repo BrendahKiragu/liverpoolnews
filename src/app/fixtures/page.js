@@ -48,7 +48,7 @@ const Fixtures = () => {
   if (loading) {
     return (
       <div className="bg-[#DC0714 text-white text-center py-4">
-        <p className="text-lg font-medium">Loading fixtures...</p>
+        <p className="text-lg font-medium">Loading Upcoming fixtures ⚽⚽⚽</p>
       </div>
     );
   }
@@ -57,8 +57,8 @@ const Fixtures = () => {
     <div className="min-h-screen bg-white text-black font-sans">
       <Header />
       <main className="p-6">
-        <h2 className="text-3xl font-bold text-[#DC0714] text-center mb-8 relative z-10">
-          Upcoming Matches
+        <h2 className="text-xl font-bold text-[#DC0714] text-center mb-8 relative z-10">
+          ⏰Upcoming Premier League & Champions League Matches⚽
         </h2>
         <img src="/anfield.jpg" className="w-full h-auto" />
 
@@ -88,7 +88,8 @@ const Fixtures = () => {
                         weekday: "short",
                         month: "short",
                         year: "numeric",
-                      })}
+                      })}{" "}
+                      ⏰
                     </p>
 
                     <div className="flex items-center sm:mt-2 justify-between">
