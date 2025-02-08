@@ -91,7 +91,9 @@ function Player() {
           <p>No players available</p>
         )}
       </div>
-      <Footer />
+      <div className="bg-[#DC0714] text-white">
+        <Footer />
+      </div>
     </div>
   );
 }
