@@ -48,7 +48,7 @@ export default function Played() {
   if (loading) {
     return (
       <div className="bg-[#DC0714 text-white text-center py-4">
-        <p className="text-lg font-medium">Loading Played Fixtures...</p>
+        <p className="text-lg font-medium">Loading Played Fixtures ⚽⚽⚽</p>
       </div>
     );
   }
