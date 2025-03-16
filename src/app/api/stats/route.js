@@ -27,7 +27,9 @@ export async function GET(request) {
     });
   } catch (error) {
     console.error("Error fetching data:", error);
-    return new Response(JSON.stringify({ error: "Internal Server Error" }), {
+    const errorMessage =
+      error instanceof Error ? error.message : "Internal Server Error";
+    return new Response(JSON.stringify({ error: errorMessage }), {
       status: 500,
       headers: { "Content-Type": "application/json" },
     });
