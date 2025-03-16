@@ -13,7 +13,7 @@ function Player() {
       try {
         const res = await fetch("/api/stats");
         const data = await res.json();
-        setPlayers(data || []);
+        setPlayers(data.players || []);
         console.log("here are your players", data);
         console.log("HELLO");
       } catch (error) {
