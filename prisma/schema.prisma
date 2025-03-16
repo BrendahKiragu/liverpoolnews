@@ -22,3 +22,12 @@ model Players {
   image String
   worth Float
 }
+
+model Legends {
+  id Int @id @default(autoincrement())
+  name String
+  position String
+  nationality String
+  image String
+  worth Float
+}
