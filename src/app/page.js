@@ -7,7 +7,7 @@ import News from "@/component/news";
 const fetchNews = async () => {
   const apiKey = process.env.NEWS_API_KEY;
   // const url = `https://newsapi.org/v2/everything?q=liverpool+fc+news&epl&anfield&arne+slot&language=en&apiKey=${apiKey}`;
-  // const url = `https://newsapi.org/v2/everything?q=lfc&anfield&lfc&arne+slot&livescore&language=en&apiKey=${apiKey}`;
+// const url = `https://newsapi.org/v2/everything?q="lfc+transfers"&language=en&apiKey=${apiKey}`;
   const url = `https://newsapi.org/v2/everything?q=arne$slot&lfc&champions+league&language=en&sortBy=publishedAt&apiKey=${apiKey}`;
 
   const response = await fetch(url, { cache: "no-store" });
