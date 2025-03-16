@@ -4,18 +4,18 @@ import { FaFacebook, FaTwitter, FaYoutube, FaTiktok } from "react-icons/fa";
 const Footer = () => {
   return (
     <footer className="py-8 bg-[#b71515] text-white">
-      <div className="container mx-auto flex justify-between">
+      <div className="container mx-auto flex justify-center">
         {/* Image Column */}
-        <div className="w-full md:w-1/3">
+        <div className="w-full md:w-1/3 text-center">
           <h2 className="font-bold text-lg mb-3">Our Team</h2>
           <img
             src="/logo.webp"
             alt="Liverpool Team"
-            className="w-10 h-auto rounded-lg shadow-lg"
+            className="w-10 h-auto rounded-lg shadow-lg mx-auto"
           />
         </div>
         {/* Quick Links Column */}
-        <div className="w-full md:w-1/3 mb-4 md:mb-0">
+        <div className="w-full md:w-1/3 mb-4 md:mb-0 text-center">
           <h2 className="font-bold text-lg mb-3">Quick Links</h2>
           <ul>
             <li>
@@ -37,10 +37,10 @@ const Footer = () => {
         </div>
 
         {/* Social Links Column */}
-        <div className="w-full md:w-1/3 mb-4 md:mb-0">
+        <div className="w-full md:w-1/3 mb-4 md:mb-0 text-center">
           <h2 className="font-bold text-lg mb-3">Follow Us</h2>
-          <div className="flex space-x-4">
-            <ul>
+          <div className="flex justify-center space-x-4">
+            <ul className="flex space-x-8">
               <li>
                 <a href="#" className="text-white">
                   <FaFacebook size={24} />
@@ -67,7 +67,7 @@ const Footer = () => {
       </div>
 
       {/* Footer Bottom: Copyright Text */}
-      <div className="py-2 align-center text-center mt-8">
+      <div className="py-2 text-center mt-8">
         <p className="text-white text-sm">
           &copy; {new Date().getFullYear()} Liverpoolnews. All rights reserved.
         </p>
