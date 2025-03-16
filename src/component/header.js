@@ -41,7 +41,7 @@ const Header = () => {
                 name: "Players",
                 links: [
                   { href: "/players", label: "Current Squad" },
-                  { href: "/playerss", label: "Legends" },
+                  { href: "/players/juniors", label: "Academy/Juniors" },
                 ],
                 key: "players",
               },
@@ -81,7 +81,7 @@ const Header = () => {
                         <li key={index}>
                           <Link
                             href={link.href}
-                            className="block px-6 py-3 text-sm font-medium text-center hover:bg-gray-100 transition-colors duration-200 ease-in-out"
+                            className="block px-6 py-3 text-sm font-medium text-center hover:underline"
                           >
                             {link.label}
                           </Link>
