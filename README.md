@@ -1,6 +1,6 @@
 # Liverpoolnews App
 
-Welcome to **Liverpoolnews**, your source for the latest Liverpool FC news, player stats, and upcoming fixtures.
+Welcome to **Liverpoolnews-now**, your source for the latest Liverpool FC news, player stats, and upcoming fixtures.
 
 ## Table of Contents
 
@@ -31,7 +31,6 @@ Check out the app live at [insert live link here] for a seamless experience of a
 - **Next.js**: A React framework for building static and dynamic websites, with server-side rendering.
 - **Tailwind CSS**: For modern and responsive styling.
 - **Node.js**: Server-side JavaScript runtime for managing backend logic.
-- **Express**: Framework for building the API (if applicable).
 - **API Integration**: Fetches live data for news, player stats, and fixtures on the server side via SSR.
 
 ## Getting Started
@@ -47,4 +46,12 @@ To run the app locally on your machine, follow these steps:
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/liverpool-news.git
+   git clone git@github.com:BrendahKiragu/liverpoolnews.git
+   
+2. **Install dependecies**:
+   ```bash
+   npm install
+
+3. **Run the project**:
+   ```bash
+   npm run dev
