@@ -24,7 +24,7 @@ Welcome to **Liverpoolnews-now**, your source for the latest Liverpool FC news, 
 
 ## Demo
 
-Check out the app live at [insert live link here] for a seamless experience of all Liverpool FC-related updates.
+Check out the app live at [https://liverpoolnews-now.vercel.app/] for a seamless experience of all Liverpool FC-related updates.
 
 ## Technologies Used
 
